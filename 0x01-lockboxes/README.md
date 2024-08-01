@@ -2,7 +2,7 @@
 
 **Algorithm | Python**
 
-**Author:** Carrie Ybay, Software Engineer at Holberton School
+**Author:** Carrie Ybay, Software Engineer at Holberton School.
 
 ## Project Description
 
