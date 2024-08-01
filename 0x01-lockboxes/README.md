@@ -2,34 +2,36 @@
 
 **Algorithm | Python**
 
-**Author:** Carrie Ybay, Software Engineer at Holberton School.
+**Author:** Carrie Ybay, Software Engineer at Holberton School
 
 ## Project Description
 
-This project explores lockbox algorithms using Python. It focuses on efficient data structures and problem-solving techniques to determine if a set of lockboxes can be unlocked given a specific starting key.
+This project explores the Lockboxes Challenge, focusing on efficient algorithm implementation in Python. The goal is to determine if a set of numbered boxes, each potentially containing keys to other boxes, can all be unlocked starting with the first box.
 
-## Project Goals
+## Lockboxes Challenge
 
-- Implement lockbox algorithms in Python.
-- Optimize code for performance and scalability.
-- Adhere to best coding practices and documentation standards.
+You are given `n` locked boxes numbered from 0 to `n - 1`. Each box may contain keys to other boxes.
 
-## Requirements
+**Task:**
 
-### General
+Write a method `canUnlockAll(boxes)` that determines if all boxes can be opened.
 
-- **Allowed editors:** vi, vim, emacs
-- **Environment:** Ubuntu 14.04 LTS using python3 (version 3.4.3)
-- **Line endings:** All files must end with a new line.
-- **Shebang:** The first line of all files should be `#!/usr/bin/python3`
-- **README:** A `README.md` file at the root of the project folder is mandatory.
-- **Documentation:** Code must be well-documented.
-- **Style:** Adhere to PEP 8 style guidelines (version 1.7.x).
-- **Permissions:** All files must be executable.
+**Conditions:**
 
-## Installation
+- `boxes` is a list of lists representing the boxes and their contents.
+- A key with the same number as a box opens that box.
+- All keys are positive integers.
+- There may be keys that do not correspond to any box.
+- The first box, `boxes[0]`, is unlocked.
+- Return `True` if all boxes can be opened, otherwise return `False`.
 
-1. **Navigate to the project directory:**
-   ```bash
-   cd 0x01-lockboxes
+**Example:**
+```python
+boxes = [[1], [2], [3], [4], []]
+print(canUnlockAll(boxes))  # Output: True
 
+boxes = [[1, 4, 6], [2], [0, 4, 1], [5, 6, 2], [3], [4, 1], [6]]
+print(canUnlockAll(boxes))  # Output: True
+
+boxes = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
+print(canUnlockAll(boxes))  # Output: False
