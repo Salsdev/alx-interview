@@ -13,3 +13,4 @@ def canUnlockAll(boxes):
         if unlocked is False:
             return unlocked
     return True
+
